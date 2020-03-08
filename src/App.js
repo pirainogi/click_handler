@@ -1,25 +1,16 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
 
+  const [clicks, setClicks] = useState(0)
 
-  const clickHandler = () => {
-    console.log('click')
-    // this.setState({
-    //   clicks: this.state.clicks += 1
-    // })
-  }
-
-
-    return (
-      <div className="App">
-        <h3 className="clicks"> Clicks: {}</h3>
-        <button onClick={clickHandler}>click me</button>
-      </div>
-    );
-
+  return (
+    <div className="App">
+      <h3 className="clicks"> Clicks: {clicks}</h3>
+      <button onClick={() => setClicks(clicks + 1)}>click me</button>
+    </div>
+  );
 
 }
 

@@ -1,28 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends React.Component {
+function App() {
 
-  state = {
-    clicks: 0
+
+  const clickHandler = () => {
+    console.log('click')
+    // this.setState({
+    //   clicks: this.state.clicks += 1
+    // })
   }
 
-  clickHandler = () => {
-    // console.log('click')
-    this.setState({
-      clicks: this.state.clicks += 1
-    })
-  }
 
-  render(){
     return (
       <div className="App">
-        <h3 className="clicks"> Clicks: {this.state.clicks}</h3>
-        <button onClick={this.clickHandler}>click me</button>
+        <h3 className="clicks"> Clicks: {}</h3>
+        <button onClick={clickHandler}>click me</button>
       </div>
     );
-  }
+
 
 }
 

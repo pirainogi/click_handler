@@ -9,7 +9,7 @@ class App extends React.Component {
   }
 
   clickHandler = () => {
-    console.log('click')
+    // console.log('click')
     this.setState({
       clicks: this.state.clicks += 1
     })
@@ -19,7 +19,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h3 className="clicks"> Clicks: {this.state.clicks}</h3>
-        <button onClick={() => this.clickHandler()}>click me</button>
+        <button onClick={this.clickHandler}>click me</button>
       </div>
     );
   }
